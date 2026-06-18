@@ -9,18 +9,13 @@ public:
             else
                 neg.push_back(x);
         }
-
-          vector<int> ans(nums.size());
-
         int p = 0, n = 0;
-
         for (int i = 0; i < nums.size(); i++) {
             if (i % 2 == 0)
-                ans[i] = pos[p++];
+                nums[i] = pos[p++];
             else
-                ans[i] = neg[n++];
+               nums[i] = neg[n++];
         }
-
-        return ans;
+        return nums;
     }
 };
